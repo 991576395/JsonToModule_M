@@ -1,0 +1,41 @@
+<idea-plugin version="2">
+  <id>com.xu.jsonmodule.plugin.id</id>
+  <name>jsonToModuleM</name>
+  <version>1.0.1</version>
+  <vendor email="991576395@qq.com" url="http://www.yourcompany.com">jsonToModuleM</vendor>
+
+  <description><![CDATA[
+     json转module开发工具，
+       使用帮助:任意地方选中json字符串，点击右键 选择“创建Json实体类” 输入包名即可
+     如有问题可以 991576395@qq.com 联系我
+    ]]></description>
+
+  <change-notes>
+    1.0.0 版本首次上传
+    1.0.1 修复缓存bug
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products-->
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+      <!-- Add your actions here -->
+      <action class="com.CreatAction" id="ceshi" text="创建Json实体类">
+        <!--<add-to-group group-id="GenerateGroup" anchor="last"/>-->
+        <!--<keyboard-shortcut keymap="$default" first-keystroke="shift ctrl a"/>-->
+        <add-to-group group-id="VersionControlsGroup" anchor="first"/>
+        <!--<add-to-group group-id="VcsGroups" anchor="first"/>-->
+        <add-to-group group-id="CutCopyPasteGroup" anchor="first"/>
+      </action>
+  </actions>
+
+</idea-plugin>
